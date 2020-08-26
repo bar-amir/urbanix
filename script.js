@@ -17,22 +17,22 @@ var data =
         //hydraulics
         'top': 48,
         'left': 26,
-        'pan': 'pans/pan-9.html',
+        'pan': 'pans/pan-10.html',
         'vid': 'https://www.youtube.com/embed/QYhv0r2HfOE'
         },
         {
         //spinning
         'top': 43,
         'left': 41,
-        'pan': 'pans/pan-10.html',
-        'vid': 'https://www.youtube.com/embed/NX-fJAJqn7Q'
+        'pan': 'pans/pan-9.html',
+        'vid': 'https://www.youtube.com/embed/RceDPUsw7yo'
         },
         {
         //mature
         'top': 46,
         'left': 51,
         'pan': 'pans/pan-2.html',
-        'vid': 'https://www.youtube.com/embed/Ai8205Qrjwo'
+        'vid': 'https://www.youtube.com/embed/pUQRKOu2vDk'
         },
         {
         //kettlebell
@@ -53,8 +53,20 @@ var data =
         'top': 17,
         'left': 63,
         'pan': 'pans/pan-7.html',
-        'vid': 'https://www.youtube.com/embed/bHmzGV-NTno'
+        'vid': 'https://www.youtube.com/embed/x3PwGp0-hPM'
         },
+        {
+        'top': 62,
+        'left': 61,
+        'pan': 'pans/pan-1.html',
+        'vid': null
+        },
+        {
+        'top': 88,
+        'left': 8,
+        'pan': 'pans/pan-13.html',
+        'vid': null
+        }
       ];
 
       var is360 = true;
