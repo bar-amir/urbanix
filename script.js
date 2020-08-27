@@ -18,7 +18,7 @@ var data =
         'top': 48,
         'left': 26,
         'pan': 'pans/pan-10.html',
-        'vid': 'https://www.youtube.com/embed/QYhv0r2HfOE'
+        'vid': 'https://www.youtube.com/embed/_0t0Zo0agMI'
         },
         {
         //spinning
