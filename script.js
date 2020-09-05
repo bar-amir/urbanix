@@ -4,68 +4,78 @@ var data =
         'top': 70,
         'left': 28,
         'pan': 'pans/pan-12.html',
-        'vid': 'https://www.youtube.com/embed/yKG-o7eZsjI'
+        'vid': 'https://www.youtube.com/embed/yKG-o7eZsjI',
+        'pdf': 'pdfs/functional.pdf'
         },
         {
         //trx
         'top': 63,
         'left': 14,
         'pan': 'pans/pan-11.html',
-        'vid': 'https://www.youtube.com/embed/6yOl7V66dak'
+        'vid': 'https://www.youtube.com/embed/6yOl7V66dak',
+        'pdf': 'pdfs/trx.pdf'
         },
         {
         //hydraulics
         'top': 48,
         'left': 26,
         'pan': 'pans/pan-10.html',
-        'vid': 'https://www.youtube.com/embed/_0t0Zo0agMI'
+        'vid': 'https://www.youtube.com/embed/_0t0Zo0agMI',
+        'pdf': 'pdfs/hydraulics.pdf'
         },
         {
         //spinning
         'top': 43,
         'left': 41,
         'pan': 'pans/pan-9.html',
-        'vid': 'https://www.youtube.com/embed/RceDPUsw7yo'
+        'vid': 'https://www.youtube.com/embed/RceDPUsw7yo',
+        'pdf': 'pdfs/spinning.pdf'
         },
         {
         //mature
         'top': 46,
         'left': 51,
         'pan': 'pans/pan-2.html',
-        'vid': 'https://www.youtube.com/embed/pUQRKOu2vDk'
+        'vid': 'https://www.youtube.com/embed/pUQRKOu2vDk',
+        'pdf': 'pdfs/mature.pdf'
         },
         {
         //kettlebell
         'top': 42,
         'left': 59,
         'pan': 'pans/pan-3.html',
-        'vid': 'https://www.youtube.com/embed/qblKQ8XyKy4'
+        'vid': 'https://www.youtube.com/embed/qblKQ8XyKy4',
+        'pdf': 'pdfs/kettlebell.pdf'
         },
         {
         //ninja
         'top': 30,
         'left': 52,
         'pan': 'pans/pan-6.html',
-        'vid': 'https://www.youtube.com/embed/sopbGnYmjlU'
+        'vid': 'https://www.youtube.com/embed/sopbGnYmjlU',
+        'pdf': 'pdfs/ninja.pdf'
         },
         {
         //street workout
         'top': 17,
         'left': 63,
         'pan': 'pans/pan-7.html',
-        'vid': 'https://www.youtube.com/embed/x3PwGp0-hPM'
+        'vid': 'https://www.youtube.com/embed/x3PwGp0-hPM',
+        'pdf': 'pdfs/street-workout.pdf'
         },
         {
         'top': 62,
         'left': 61,
         'pan': 'pans/pan-1.html',
-        'vid': null
+        'vid': null,
+        'pdf': 'pdfs/park.pdf'
         },
         {
         'top': 88,
         'left': 8,
         'pan': 'pans/pan-13.html',
-        'vid': null
+        'vid': null,
+        'pdf': 'pdfs/rest.pdf'
         }
       ];
 
@@ -109,6 +119,9 @@ var data =
               if (data[openDotId].pan && is360) {
                 $('#buttons').append(`<div class="button" id="pan-link"><div class="button-inner">360°</div></div>`);
               }
+              if (data[openDotId].pdf && is360) {
+                $('#buttons').prepend(`<div class="button" id="pdf-link"><div class="button-inner">מצגת</div></div>`);
+              }
               $("#pan-link").click(function () {
                 $('#pan-container').empty();
                 $('#pan-container').prepend(`<iframe class="pan" id="pan-${openDotId}" src="${data[openDotId].pan}" allowfullscreen="yes" allowvr="yes"></iframe>`);
@@ -120,6 +133,9 @@ var data =
                 $('#vid-container').prepend(`<div class="vid" id="vid-${openDotId}"><iframe src="${data[openDotId].vid}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`);
                 $(`#vid-container`).fadeIn();
                 $("#back").fadeIn();
+              });
+              $("#pdf-link").click(function () {
+                window.open(data[openDotId].pdf);
               });
               buttonsPos();
               $("#buttons").fadeIn();
@@ -190,4 +206,8 @@ var data =
         $("#pan-container").fadeOut(() => { $('#pan-container').empty(); });
         $("#vid-container").fadeOut(() => { $('#vid-container').empty(); });
         $("#back").fadeOut();
+      });
+
+      $("#download").click(function () {
+        window.open('pdfs/opening.pdf');
       });
